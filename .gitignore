@@ -95,6 +95,4 @@ fabric.properties
 .idea/modules.xml
 .idea/replayslol-redditapi.iml
 .idea/vcs.xml
-.idea/replayslol-redditapi.iml
-.idea/vcs.xml
-.idea/modules.xml
+src/.env
