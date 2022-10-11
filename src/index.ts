@@ -24,6 +24,13 @@ export default class App {
     this.app.use(morgan("tiny"));
     this.app.listen(PORT);
     this.app.use(express.json());
+    // NB: Middleware (http://expressjs.com/en/guide/using-middleware.html) needs to be declared before the routes that use it
+    this.app.use(function(req, res, next) {
+      if (!req.headers.authorization) {
+        return res.status(403).json({error: "Missing Authentication Key"});
+      }
+      next();
+    })
   }
 
   setupRoutes() {
