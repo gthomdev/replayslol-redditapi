@@ -11,3 +11,5 @@ install yarn, npm install yarn --global
 `yarn run:dev` to run compiled code
 
 `yarn add @types/jest --dev`
+
+Now also dependent on google data store (needs configuration)
