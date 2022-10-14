@@ -4,12 +4,13 @@ interface AddCommentsRequestBody {
   region: string;
   summonerName: string;
   timestamp: number;
+  redditSubmissionId: string;
 }
 
 const AddCommentsHandler = (req: Request, res: Response) => {
   try {
 
-    const { region, summonerName, timestamp } = req.body as AddCommentsRequestBody;
+    const { region, summonerName, timestamp, redditSubmissionId } = req.body as AddCommentsRequestBody;
     
     // Add Auth
 
@@ -24,6 +25,7 @@ const AddCommentsHandler = (req: Request, res: Response) => {
       region,
       summonerName,
       timestamp,
+      redditSubmissionId
     });
     return;
     
