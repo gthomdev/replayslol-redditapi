@@ -1,4 +1,5 @@
 const path = require('path');
+const nodeExternals = require('webpack-node-externals');
 
 module.exports = env => {
 
@@ -8,12 +9,15 @@ module.exports = env => {
     entry: './src/index.ts',
     mode: isDevelopment ? "development" : "production",
     target: 'node',
+    node: {
+      __dirname: false,
+      __filename: false,
+    },
     module: {
       rules: [
         {
           test: /\.ts?$/,
           use: 'ts-loader',
-          exclude: /node_modules/,
         },
       ],
     },
@@ -24,6 +28,7 @@ module.exports = env => {
       filename: 'main.js',
       path: path.resolve(__dirname, 'dist'),
     },
+    externals: [ nodeExternals() ],
     watch: isDevelopment,
   };
 }
