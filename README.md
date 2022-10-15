@@ -13,3 +13,5 @@ install yarn, npm install yarn --global
 `yarn add @types/jest --dev`
 
 Now also dependent on google data store (needs configuration)
+
+NB: Use "yarn add" anywhere you would use "npm install" to add a dependency

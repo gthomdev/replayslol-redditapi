@@ -1,4 +1,5 @@
 import { Request, Response, Router } from "express";
+import {storeMatch} from "../db/store";
 
 interface AddCommentsRequestBody {
   region: string;
@@ -7,7 +8,7 @@ interface AddCommentsRequestBody {
   redditSubmissionId: string;
 }
 
-const AddCommentsHandler = (req: Request, res: Response) => {
+const AddCommentsHandler = async (req: Request, res: Response) => {
   try {
 
     const { region, summonerName, timestamp, redditSubmissionId } = req.body as AddCommentsRequestBody;
@@ -17,6 +18,7 @@ const AddCommentsHandler = (req: Request, res: Response) => {
     // Validate request
 
     // TODO: DO SOMETHING WITH REGION SUMMONER NAME TIMESTAMP
+    await storeMatch(region, summonerName, timestamp, redditSubmissionId);
 
     res.statusCode = 201;
 
