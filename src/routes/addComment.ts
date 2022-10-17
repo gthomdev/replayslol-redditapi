@@ -1,5 +1,5 @@
 import { Request, Response, Router } from "express";
-import {storeMatch} from "../db/store";
+import {storeMatch} from "~/db/store";
 
 interface AddCommentsRequestBody {
   region: string;
