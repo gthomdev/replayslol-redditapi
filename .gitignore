@@ -96,3 +96,4 @@ fabric.properties
 .idea/replayslol-redditapi.iml
 .idea/vcs.xml
 src/.env
+/src/db/replays-lol-recorder-api-d93482931b36.json
