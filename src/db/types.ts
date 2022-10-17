@@ -1,6 +1,6 @@
 export interface MatchesRow {
-    region: string;
-    summonerName: string;
-    timestamp: number;
-    redditSubmissionId: string;
+    Region: string;
+    SummonerName: string;
+    Timestamp: number;
+    RedditSubmissionId: string;
 }

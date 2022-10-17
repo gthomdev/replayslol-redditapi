@@ -1,5 +1,5 @@
 import { Request, Response, Router } from "express";
-import {storeMatch} from "../db/store";
+import {storeMatch} from "~/db/store";
 
 interface AddCommentsRequestBody {
   region: string;
@@ -12,8 +12,6 @@ const AddCommentsHandler = async (req: Request, res: Response) => {
   try {
 
     const { region, summonerName, timestamp, redditSubmissionId } = req.body as AddCommentsRequestBody;
-    
-    // Add Auth
 
     // Validate request
 

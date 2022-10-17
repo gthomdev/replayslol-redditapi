@@ -23,19 +23,19 @@ export const storeInDb = async (key: string, data: Object) => {
 /**
  * Store a match object in the datastore
  *
- * @param {string} region
- * @param {string} summonerName
- * @param {number} timestamp
- * @param {string} redditSubmissionId
+ * @param {string} Region
+ * @param {string} SummonerName
+ * @param {number} Timestamp
+ * @param {string} RedditSubmissionId
  *
  */
 
-export const storeMatch = async(region: string, summonerName: string, timestamp: number, redditSubmissionId: string) => {
+export const storeMatch = async(Region: string, SummonerName: string, Timestamp: number, RedditSubmissionId: string) => {
     const match: MatchesRow = {
-        region,
-        summonerName,
-        timestamp,
-        redditSubmissionId
+        Region,
+        SummonerName,
+        Timestamp,
+        RedditSubmissionId
     }
 
     await storeInDb('Matches', match);
