@@ -1,4 +1,4 @@
-import { AddCommentsHandler__TESTING as AddCommentsHandler } from "./../addComment";
+import { AddCommentsHandler__TESTING as AddCommentsHandler } from "../addMatch";
 
 describe("addCommentsHandler", () => {
 
