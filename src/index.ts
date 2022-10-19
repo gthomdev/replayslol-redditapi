@@ -3,12 +3,13 @@ import * as dotenv from "dotenv";
 import cors from "cors";
 import helmet from "helmet";
 
-import AddCommentsRoute from "./routes/addMatch";
-import GetMatchForSummonerNameRoute from "./routes/getMatchForSummonerName";
+import AddCommentsRoute from "~/routes/addMatch";
+import GetMatchForSummonerNameRoute from "~/routes/getMatchForSummonerName";
+import GetMatchForRedditSubmission from "~/routes/getMatchForRedditSubmission";
 
 const PORT = process.env.PORT || 8080;
 const morgan = require("morgan");
-const v1Routes = [AddCommentsRoute, GetMatchForSummonerNameRoute];
+const v1Routes = [AddCommentsRoute, GetMatchForSummonerNameRoute, GetMatchForRedditSubmission];
 
 export default class App {
   app: Express = express();

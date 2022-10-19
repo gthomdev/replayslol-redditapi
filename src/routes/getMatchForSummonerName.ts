@@ -12,7 +12,7 @@ const getMatchForSummonerNameHandler = async (req: Request, res: Response) => {
         const { region, summonerName} = req.body as getMatchForSummonerNameRequestBody;
 
         // Validate request
-        
+
         const matches = await getMatchForSummonerName(summonerName, region);
 
         res.statusCode = 201;

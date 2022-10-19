@@ -5,7 +5,7 @@ import {getDatastore} from "./datastore";
  * @param {string} RedditSubmissionId
  */
 
-export const getMatchForRedditSubmissionId = async (RedditSubmissionId: string) => {
+export const getMatchForRedditSubmission = async (RedditSubmissionId: string) => {
     const datastore = getDatastore();
 
     const query = datastore.createQuery('Matches')
