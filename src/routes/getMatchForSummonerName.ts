@@ -1,21 +1,16 @@
 import { Request, Response, Router } from "express";
 import {getMatchForSummonerName} from "~/db/getMatchForSummonerName";
 
-interface getMatchForSummonerNameRequestBody {
-    region: string;
-    summonerName: string;
-}
-
 const getMatchForSummonerNameHandler = async (req: Request, res: Response) => {
     try {
-
-        const { region, summonerName} = req.body as getMatchForSummonerNameRequestBody;
+        const region  = req.query.region as string;
+        const summonerName  = req.query.summonerName as string;
 
         // Validate request
 
         const matches = await getMatchForSummonerName(summonerName, region);
 
-        res.statusCode = 201;
+        res.statusCode = 200;
 
         res.json({
             success: true,
@@ -35,4 +30,4 @@ const getMatchForSummonerNameHandler = async (req: Request, res: Response) => {
 
 export const AddCommentsHandler__TESTING = getMatchForSummonerNameHandler;
 
-export default Router().post('/comments/getMatchForSummonerName', getMatchForSummonerNameHandler);
+export default Router().get('/comments/getMatchForSummonerName', getMatchForSummonerNameHandler);
