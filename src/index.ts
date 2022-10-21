@@ -6,10 +6,11 @@ import helmet from "helmet";
 import AddCommentsRoute from "~/routes/addMatch";
 import GetMatchForSummonerNameRoute from "~/routes/getMatchForSummonerName";
 import GetMatchForRedditSubmission from "~/routes/getMatchForRedditSubmission";
+import GetLatestMatch  from "~/routes/getLatestMatch";
 
 const PORT = process.env.PORT || 8080;
 const morgan = require("morgan");
-const v1Routes = [AddCommentsRoute, GetMatchForSummonerNameRoute, GetMatchForRedditSubmission];
+const v1Routes = [AddCommentsRoute, GetMatchForSummonerNameRoute, GetMatchForRedditSubmission, GetLatestMatch];
 
 export default class App {
   app: Express = express();
