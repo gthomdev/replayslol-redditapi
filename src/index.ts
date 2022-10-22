@@ -7,10 +7,11 @@ import AddCommentsRoute from "~/routes/addMatch";
 import GetMatchForSummonerNameRoute from "~/routes/getMatchForSummonerName";
 import GetMatchForRedditSubmission from "~/routes/getMatchForRedditSubmission";
 import GetLatestMatch  from "~/routes/getLatestMatch";
+import GetMatchForRegion from "~/routes/getMatchForRegion";
 
 const PORT = process.env.PORT || 8080;
 const morgan = require("morgan");
-const v1Routes = [AddCommentsRoute, GetMatchForSummonerNameRoute, GetMatchForRedditSubmission, GetLatestMatch];
+const v1Routes = [AddCommentsRoute, GetMatchForSummonerNameRoute, GetMatchForRedditSubmission, GetLatestMatch, GetMatchForRegion];
 
 export default class App {
   app: Express = express();
