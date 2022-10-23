@@ -4,7 +4,6 @@ describe("addCommentsHandler", () => {
 
   const DummyRequest = {
     body: {
-      region: "EUW",
       summonerName: "ALL CHAT SMILEY",
       timestamp: 123456,
     }
