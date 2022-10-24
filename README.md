@@ -1,17 +1,25 @@
-install node (v14)
+# ReplaysLol-RedditApi
 
-install npm
+## Installation
+* Install node (v14)
+* Install npm
+* Install yarn, npm install yarn --global
 
-install yarn, npm install yarn --global
+Run `yarn install` to install all dependencies.
+Run `yarn dev` to compile code
+Run `yarn run:dev` to run compiled code
+Run `yarn add @types/jest --dev` to add jest types
 
-`yarn install`
+## Dependencies
+* [Node](https://nodejs.org/en/)
+* [Yarn](https://yarnpkg.com/)
+* [TypeScript](https://www.typescriptlang.org/)
+* [Jest](https://jestjs.io/)
+* [Express](https://expressjs.com/)
+* [Dotenv](https://www.npmjs.com/package/dotenv)
+* [Morgan](https://www.npmjs.com/package/morgan)
+* [Nodemon](https://www.npmjs.com/package/nodemon)
 
-`yarn dev` to compile code
-
-`yarn run:dev` to run compiled code
-
-`yarn add @types/jest --dev`
-
-Now also dependent on google data store (needs configuration)
+## Notes
 
 NB: Use "yarn add" anywhere you would use "npm install" to add a dependency
