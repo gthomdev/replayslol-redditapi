@@ -27,3 +27,4 @@ NB: Use "yarn add" anywhere you would use "npm install" to add a dependency
 ## Todo
 
 * Update tests as the baseline is currently broken
+* Add additional endpoints
