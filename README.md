@@ -30,3 +30,5 @@ NB: Use "yarn add" anywhere you would use "npm install" to add a dependency
 * Add additional endpoints
 * Speak to Dave about the work that needs to be done to fix the test and if there are any good Jest examples
 * Enforce the spec on the API to get cleaner content in the datastore
+* Add tests for additional endpoints
+* Work out if any of the current middleware is unnecessary
