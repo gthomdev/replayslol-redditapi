@@ -23,8 +23,11 @@ describe("addCommentsHandler", () => {
 
     expect(mockedJsonFn).toBeCalledTimes(1);
     expect(mockedJsonFn).toBeCalledWith({
-      success: false,
-      error: "example error message here",
+    "redditSubmissionId": undefined,
+    "region": undefined,
+    "success": true,
+    "summonerName": "ALL CHAT SMILEY",
+    "timestamp": 123456,
     })
   })
 });
