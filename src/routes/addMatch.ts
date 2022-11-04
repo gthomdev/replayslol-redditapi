@@ -1,17 +1,17 @@
 import { Request, Response, Router } from "express";
 import {storeMatch} from "~/db/store";
 
-interface AddCommentsRequestBody {
+interface AddMatchRequestBody {
   region: string;
   summonerName: string;
   timestamp: number;
   redditSubmissionId: string;
 }
 
-const AddCommentsHandler = async (req: Request, res: Response) => {
+const AddMatchHandler = async (req: Request, res: Response) => {
   try {
 
-    const { region, summonerName, timestamp, redditSubmissionId } = req.body as AddCommentsRequestBody;
+    const { region, summonerName, timestamp, redditSubmissionId } = req.body as AddMatchRequestBody;
 
     // Validate request
 
@@ -37,6 +37,6 @@ const AddCommentsHandler = async (req: Request, res: Response) => {
   }
 }
 
-export const AddCommentsHandler__TESTING = AddCommentsHandler;
+export const AddCommentsHandler__TESTING = AddMatchHandler;
 
-export default Router().post('/comments/add', AddCommentsHandler);
+export default Router().post('/comments/add', AddMatchHandler);
