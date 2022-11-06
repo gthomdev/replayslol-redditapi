@@ -4,11 +4,18 @@ describe("addCommentsHandler", () => {
 
   const DummyRequest = {
     body: {
-      summonerName: "ALL CHAT SMILEY",
-      timestamp: 123456,
+        region: "NA",
+        summonerName: "DummySummonerName",
+        timestamp: 123456789,
+        redditSubmissionId: "DummyRedditSubmissionId"
     }
   }
-
+/*
+  region: string;
+  summonerName: string;
+  timestamp: number;
+  redditSubmissionId: string;
+ */
   it("Should throw a 400 error if missing region from request", async () => {
     const mockedJsonFn = jest.fn();
 
