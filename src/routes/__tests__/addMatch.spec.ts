@@ -30,11 +30,10 @@ describe("addCommentsHandler", () => {
 
     expect(mockedJsonFn).toBeCalledTimes(1);
     expect(mockedJsonFn).toBeCalledWith({
-    "redditSubmissionId": undefined,
-    "region": undefined,
-    "success": true,
-    "summonerName": "ALL CHAT SMILEY",
-    "timestamp": 123456,
+      region: "NA",
+      summonerName: "DummySummonerName",
+      timestamp: 123456789,
+      redditSubmissionId: "DummyRedditSubmissionId"
     })
   })
 });
