@@ -30,8 +30,4 @@ describe("addCommentsHandler", () => {
     "timestamp": 123456,
     })
   })
-
-  it("Should throw a 400 error if missing summonerName from request", async () => {
-
-  }
 });

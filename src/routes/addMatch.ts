@@ -8,7 +8,7 @@ interface AddCommentsRequestBody {
   redditSubmissionId: string;
 }
 
-const AddMatchHandler = async (req: Request, res: Response) => {
+const AddCommentsHandler = async (req: Request, res: Response) => {
   try {
 
     const { region, summonerName, timestamp, redditSubmissionId } = req.body as AddCommentsRequestBody;
@@ -37,6 +37,6 @@ const AddMatchHandler = async (req: Request, res: Response) => {
   }
 }
 
-export const AddMatchHandler__TESTING = AddMatchHandler;
+export const AddCommentsHandler__TESTING = AddCommentsHandler;
 
-export default Router().post('/comments/add', AddMatchHandler);
+export default Router().post('/comments/add', AddCommentsHandler);
